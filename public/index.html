@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
     <title>PWA Code Editor</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Progressive Web App Code Editor</h1>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('service-worker.js')
-                    .then(function(registration) {
-                        console.log('Service Worker registered with scope:', registration.scope);
-                    })
-                    .catch(function(error) {
-                        console.log('Service Worker registration failed:', error);
-                    });
-            });
-        }
-    </script>
+    <header>
+        <h1>Welcome to the PWA Code Editor</h1>
+    </header>
+    <main id="editor">
+        <textarea placeholder="Write your code here..."></textarea>
+    </main>
+    <footer>
+        <p>&copy; 2026 Azcodrer. All rights reserved.</p>
+    </footer>
 </body>
 </html>
